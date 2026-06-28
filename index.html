@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Xơ Đăng Farm Coffee | Hơi Thở Đại Ngàn</title>
+    <meta name="description" content="Chuyên cung cấp Cà phê mộc nguyên bản từ đại ngàn Tây Nguyên. Đặt mua ngay các dòng Robusta Honey, Natural và Signature Blend rang mới mỗi ngày. Giao hàng toàn quốc!">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        
+    .shopee-floating-btn {
+        position: fixed;
+        bottom: 30px; 
+        left: 30px;   
+        width: 70px;  /* Đã tăng từ 55px lên 70px để nút to hơn */
+        height: 70px; /* Đã tăng từ 55px lên 70px */
+        background-color: white; 
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        text-decoration: none;
+        
+        /* Lệnh gọi hiệu ứng chuyển động liên tục */
+        animation: shopee-pulse 2s infinite; 
+    }
+
+    .shopee-floating-btn img {
+        width: 45px; /* Đã tăng icon bên trong từ 35px lên 45px */
+        height: auto;
+    }
+
+    /* Thiết lập hiệu ứng nhịp đập và tỏa vòng sáng màu cam Shopee */
+    @keyframes shopee-pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(238, 77, 45, 0.7);
+        }
+        70% {
+            transform: scale(1.1); /* Phóng to lên 10% */
+            box-shadow: 0 0 0 15px rgba(238, 77, 45, 0); /* Vòng sáng mờ dần */
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(238, 77, 45, 0);
+        }
+    }
+        section {
+    padding: 20px 0 !important; /* Giảm padding trên dưới xuống còn 20px thay vì 80-100px */
+}
+
+        :root { --forest-dark: #12261A; --forest-main: #1E3F2A; --moss-green: #3A6B4C; --fog-white: #F4F6F5; --earth-brown: #6B4E31; --sunlight: #D4AF37; --leaf-shape: 40px 0 40px 0; --hill-shape: 50% 50% 0 0 / 100% 100% 0 0; --pattern-bg: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3f2a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--fog-white); background-image: var(--pattern-bg); color: var(--forest-dark); line-height: 1.7; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 800; color: var(--forest-dark); }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        
+        /* Typography */
+        .section-title { font-size: 3rem; margin-bottom: 15px; }
+        .section-subtitle { display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; color: var(--moss-green); font-weight: 800; margin-bottom: 10px; }
+        .highlight { color: var(--earth-brown); font-style: italic; }
+
+        /* Buttons */
+        .btn-jungle { background: var(--forest-main); color: #fff; padding: 15px 35px; border-radius: 30px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; transition: 0.4s; box-shadow: 0 10px 20px rgba(30, 63, 42, 0.3); display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; justify-content: center;}
+        .btn-jungle:hover { background: var(--earth-brown); transform: translateY(-3px); box-shadow: 0 15px 25px rgba(107, 78, 49, 0.4); }
+        
+        /* NAVBAR */
+        .navbar { width: 100%; padding: 10px 20px; box-sizing: border-box; background: rgba(244, 246, 245, 0.98); border-bottom: 1px solid rgba(30, 63, 42, 0.15); position: sticky; top: 0; z-index: 999; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; }
+        .logo-wrap { display: flex; align-items: center; gap: 15px; justify-content: flex-start; }
+        .logo-img { height: 65px; border-radius: 0; box-shadow: none; background: transparent; }
+        .logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--forest-dark); line-height: 1.1; letter-spacing: -0.5px; }
+        .logo-sub { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: var(--moss-green); font-weight: 700; text-transform: uppercase; }
+        
+        .nav-links { display: flex; gap: 40px; font-weight: 700; font-size: 0.95rem; justify-content: center; }
+        .nav-links a { color: var(--forest-dark); position: relative; padding: 5px 0; }
+        .nav-links a::before { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background: var(--sunlight); transition: all 0.4s ease; }
+        .nav-links a:hover::before { width: 100%; left: 0; }
+        
+        .right-section { display: flex; align-items: center; gap: 20px; justify-content: flex-end; }
+        
+        /* ICON GIỎ HÀNG NAVBAR XỊN HƠN */
+        .nav-cart-btn {
+            background: rgba(212, 175, 55, 0.1); 
+            border: 1px solid var(--sunlight);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--forest-dark);
+            cursor: pointer;
+            position: relative;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-cart-btn:hover {
+            background: var(--sunlight);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .nav-cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--earth-brown);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5px;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 2px solid #fff;
+        }
+
+        .lang-switcher { display: flex; gap: 10px; align-items: center; }
+        .lang-switcher button { border: none; background: none; cursor: pointer; padding: 0; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .lang-switcher button:hover { transform: scale(1.1); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .lang-switcher img { width: 28px; height: 20px; border-radius: 3px; border: 1px solid #ddd; display: block; }
+
+        /* HERO - SƯƠNG MÙ */
+        .hero { position: relative; height: 90vh; background: var(--forest-dark); display: flex; align-items: center; overflow: hidden; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; mix-blend-mode: overlay; transition: transform 10s ease; }
+        .hero:hover .hero-bg { transform: scale(1.05); }
+        .hero-content { position: relative; z-index: 10; color: #fff; max-width: 750px; }
+        .hero-title { font-size: 4.5rem; color: #fff; line-height: 1.2; margin-bottom: 20px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); letter-spacing: -1px; }
+        .hero-desc { font-size: 1.15rem; font-weight: 400; margin-bottom: 40px; color: var(--fog-white); text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+        .hero-hill-divider { position: absolute; bottom: -1px; left: 0; width: 100%; height: 80px; background: var(--fog-white); background-image: var(--pattern-bg); border-radius: var(--hill-shape); z-index: 10; }
+
+        /* THỐNG KÊ */
+        .stats-section { padding: 60px 0 100px; position: relative; z-index: 11; margin-top: -60px; }
+        .organic-grid { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; gap: 20px; }
+        .leaf-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); width: 230px; height: 230px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 15px 35px rgba(30, 63, 42, 0.08); border: 2px solid rgba(58, 107, 76, 0.15); transition: 0.4s; position: relative; }
+        .leaf-1 { border-radius: 115px 0 115px 0; transform: translateY(30px); }
+        .leaf-2 { border-radius: 0 115px 0 115px; transform: translateY(-30px); }
+        .leaf-3 { border-radius: 115px 0 115px 0; transform: translateY(30px); }
+        .leaf-4 { border-radius: 0 115px 0 115px; transform: translateY(-30px); }
+        .leaf-card:hover { background: var(--forest-main); transform: translateY(0) scale(1.05); border-color: var(--forest-main); border-radius: 115px; }
+        .leaf-card .stat-num { color: var(--moss-green); font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; line-height: 1; transition: 0.3s; margin-bottom: 5px; }
+        .leaf-card .stat-label { color: var(--forest-dark); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .leaf-card:hover .stat-num { color: var(--sunlight); }
+        .leaf-card:hover .stat-label { color: #fff; }
+
+        /* VỀ CHÚNG TÔI */
+        .about-section { padding: 80px 0; }
+        .about-visuals { position: relative; padding: 10px; }
+        .about-content { padding-left: 10px; }
+
+        /* QUY TRÌNH CANH TÁC NÔNG DÂN */
+        .farming-process-section { padding: 100px 0; background: var(--fog-white); position: relative; }
+        .farm-step { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+        .farm-step:last-child { margin-bottom: 0; }
+        .farm-img img { width: 100%; height: 400px; object-fit: cover; border-radius: var(--leaf-shape); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .farm-text { position: relative; padding: 20px; z-index: 1; }
+        .farm-text p { font-size: 1.05rem; color: #555; text-align: justify; line-height: 1.8; }
+        .farm-title-group { display: flex !important; align-items: center !important; gap: 20px !important; margin-bottom: 20px !important; padding: 0 !important; position: static !important; }
+        .step-num { position: static !important; transform: none !important; font-size: 5.5rem !important; font-weight: 800 !important; color: #EFE4CC !important; font-family: 'Montserrat', sans-serif !important; line-height: 1 !important; margin: 0 !important; flex-shrink: 0 !important; }
+        .farm-title-group h3 { position: static !important; font-size: 1.7rem !important; color: var(--forest-main) !important; font-weight: 800 !important; margin: 0 !important; white-space: normal !important; line-height: 1.3 !important; }
+        .farm-step.reverse .farm-img { order: 2; }
+        .farm-step.reverse .farm-text { order: 1; }
+        .farm-step.reverse .farm-title-group { flex-direction: row-reverse !important; text-align: right !important; }
+        .farm-step.reverse .farm-title-group h3 { text-align: right !important; }
+
+        /* SẢN PHẨM */
+        .products-section { padding: 100px 0; background: var(--forest-main); background-image: var(--pattern-bg); color: #fff; position: relative; border-radius: 50% 50% 0 0 / 50px 50px 0 0; margin-top: 50px; }
+        .products-section .section-title, .products-section .section-subtitle { color: #fff; }
+        .products-section .highlight { color: var(--sunlight); }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; }
+        .product-card { background: rgba(18, 38, 26, 0.85); backdrop-filter: blur(5px); border-radius: var(--leaf-shape); overflow: hidden; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; position: relative; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-10px); border-color: var(--sunlight); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        
+        .prod-img-wrap { width: 100%; height: 280px; overflow: hidden; position: relative; }
+        .prod-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: scale(1.2); opacity: 0.9; transition: 0.5s; }
+        .product-card:hover .prod-img-wrap img { opacity: 1; transform: scale(1.3); }
+        
+        .prod-badge { position: absolute; top: 20px; right: 20px; background: var(--earth-brown); color: #fff; font-weight: 700; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 1px; box-shadow: 0 5px 10px rgba(0,0,0,0.3); z-index: 2;}
+        .prod-info { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
+        .prod-title { font-size: 1.5rem; color: #fff; margin-bottom: 10px; }
+        .prod-desc { color: #C4D1C8; font-size: 0.95rem; flex-grow: 1; }
+        
+        .prod-price-box { margin-top: 20px; padding-top: 20px; border-top: 1px dashed rgba(255,255,255,0.2); }
+        .price-display { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--sunlight); margin-bottom: 15px; }
+        .weight-options { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px; }
+        .weight-btn { flex: 1; text-align: center; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #A0B2A6; padding: 8px 5px; border-radius: 6px; cursor: pointer; transition: 0.3s; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.85rem; }
+        .weight-btn:hover { border-color: var(--sunlight); color: #fff; }
+        .weight-btn.active { background: var(--earth-brown); border-color: var(--earth-brown); color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+
+        /* HÀNH TRÌNH */
+        .trail-section { padding: 80px 0; background: var(--forest-dark); color: #fff; border-bottom: 5px solid var(--earth-brown); }
+        .trail-section .section-title { color: #fff; }
+        .trail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 50px; text-align: center; }
+        .trail-step { position: relative; padding: 0 20px; }
+        .trail-icon { width: 80px; height: 80px; background: var(--moss-green); border-radius: var(--leaf-shape); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--sunlight); margin: 0 auto 20px; transform: rotate(45deg); transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .trail-step:hover .trail-icon { transform: rotate(0deg); background: var(--earth-brown); }
+        .trail-icon i { transform: rotate(-45deg); transition: 0.3s; }
+        .trail-step:hover .trail-icon i { transform: rotate(0deg); }
+        .trail-title { font-size: 1.25rem; margin-bottom: 10px; color: var(--sunlight); }
+        .trail-desc { color: #A0B2A6; font-size: 0.95rem; }
+
+        /* THƯ VIỆN ẢNH THỰC TẾ */
+        .gallery-section { padding: 80px 0; background: #fff; border-top: 1px dashed rgba(30, 63, 42, 0.2); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .gallery-item { position: relative; border-radius: var(--leaf-shape); overflow: hidden; aspect-ratio: 1 / 1; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid rgba(58, 107, 76, 0.1); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1); }
+        .gallery-item:hover img { transform: scale(1.15); }
+
+        /* LIÊN HỆ & BẢN ĐỒ */
+        .pricing-map-section { padding: 100px 0; }
+        .map-inner { display: flex; background: #fff; border-radius: var(--leaf-shape); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(58, 107, 76, 0.2); }
+        .map-info { padding: 50px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .map-frame { flex: 1; min-height: 400px; position: relative; }
+        .map-contact-row { display: flex; gap: 15px; margin-bottom: 25px; }
+        .map-contact-icon { width: 45px; height: 45px; background: var(--moss-green); color: var(--sunlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .mc-label { font-size: 0.85rem; color: #777; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+        .mc-value { font-size: 1.05rem; font-weight: 700; color: var(--forest-dark); }
+        
+        /* CÁC NÚT LIÊN HỆ BAY */
+        #button-contact-vr { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 20px; z-index: 999; }
+        .contact-btn { position: relative; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; }
+        .contact-circle { position: absolute; width: 100%; height: 100%; background-color: var(--forest-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 4px 15px rgba(0,0,0,0.3); color: #fff; font-size: 1.5rem; transition: 0.3s; }
+        .contact-fb .contact-circle { background-color: #1877F2; }
+        .contact-zalo .contact-circle { background-color: #fff; }
+        .contact-circle img { width: 35px; height: 35px; }
+        .contact-btn:hover .contact-circle { transform: scale(1.1); background-color: var(--earth-brown); }
+        .contact-ring { position: absolute; width: 100%; height: 100%; border-radius: 50%; border: 2px solid var(--moss-green); animation: pulseRing 1.5s infinite; top: 0; left: 0; z-index: 1; }
+        @keyframes pulseRing { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.8); opacity: 0; } }
+        .contact-tooltip, .phone-bar { position: absolute; right: 70px; top: 50%; transform: translateY(-50%); background-color: var(--forest-dark); color: #fff; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; white-space: nowrap; opacity: 0; visibility: hidden; transition: 0.3s; pointer-events: none; z-index: 3; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .contact-btn:hover .contact-tooltip, .contact-btn:hover .phone-bar { opacity: 1; visibility: visible; right: 75px; }
+
+        /* CSS POPUP GIỎ HÀNG (TOAST + MODAL) */
+        #toast { visibility: hidden; min-width: 250px; background-color: var(--moss-green); color: #fff; text-align: center; border-radius: 8px; padding: 16px; position: fixed; z-index: 3000; left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.3); font-family: 'Montserrat', sans-serif;}
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+
+        .cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #ccc; padding: 15px 0; }
+        .cart-item-info { flex-grow: 1; }
+        .cart-item-title { font-weight: 800; color: var(--forest-dark); font-family: 'Montserrat', sans-serif;}
+        .cart-item-meta { font-size: 0.85rem; color: var(--moss-green); font-weight: 600;}
+        .cart-item-controls { display: flex; align-items: center; gap: 10px; }
+        .qty-btn { background: #eee; border: none; padding: 5px 12px; cursor: pointer; border-radius: 5px; font-weight: bold; transition: 0.3s;}
+        .qty-btn:hover { background: var(--sunlight); color: #fff; }
+
+        /* FOOTER */
+        .footer { background: #0A140E; color: #8F9E94; padding: 80px 0 30px; font-size: 0.95rem; border-top: 5px solid var(--moss-green); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+        .footer h3 { color: #fff; font-size: 1.25rem; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; text-transform: uppercase; font-weight: 800; }
+        .f-contact p { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .f-contact i { color: var(--sunlight); font-size: 1.2rem; }
+        .f-socials { display: flex; gap: 15px; margin-top: 25px; }
+        .f-socials a { width: 45px; height: 45px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; transition: 0.3s; font-size: 1.2rem; }
+        .f-socials a:hover { background: var(--sunlight); color: var(--forest-dark); transform: translateY(-3px); }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); }
+
+        /* HIỆU ỨNG ANIMATION CUỘN CHUỘT */
+        .reveal { opacity: 0; transform: translateY(50px); transition: 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-50px); transition: 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(50px); transition: 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .stats-grid, .trail-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .map-inner { flex-direction: column; }
+            .map-frame { min-height: 300px; }
+            
+            .organic-grid { flex-wrap: wrap; justify-content: center; }
+            .leaf-card { transform: none !important; height: auto; padding: 40px 20px; width: calc(50% - 20px); }
+            .farm-step { grid-template-columns: 1fr; gap: 30px; }
+            .farm-step.reverse .farm-img { order: 1; }
+            .farm-step.reverse .farm-text { order: 2; }
+            .step-num { font-size: 5.5rem !important; } 
+            .farm-title-group { padding-left: 40px !important; min-height: 60px !important; }
+            .farm-step.reverse .farm-title-group { padding-right: 40px !important; }
+            .farm-title-group h3 { font-size: 1.3rem !important; white-space: normal !important; }
+        }
+
+        @media (max-width: 768px) {
+            .logo-img { height: 40px !important; }
+            .nav-inner { display: flex; justify-content: space-between; flex-direction: row;}
+            .nav-links { display: none; }
+            .right-section { display: flex; gap: 5px; flex-shrink: 0; }
+            .hero-title { font-size: 2rem !important; line-height: 1.2; } 
+            .stats-grid, .trail-grid { grid-template-columns: 1fr; }
+            #button-contact-vr { transform: scale(0.85); bottom: 20px; right: 20px; }
+            
+            .farm-step.reverse .farm-title-group { flex-direction: row !important; text-align: left !important; }
+            .farm-step.reverse .farm-title-group h3 { text-align: left !important; }
+        }
+
+        @media (max-width: 576px) {
+            .leaf-card { width: 100%; border-radius: 50px 0 50px 0 !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="button-contact-vr">
+        <a href="https://www.facebook.com/xodangfarmcf.vn" target="_blank" class="contact-btn contact-fb">
+            <div class="contact-ring"></div>
+            <div class="contact-circle"><i class="fab fa-facebook-f"></i></div>
+            <span class="contact-tooltip">Fanpage Facebook</span>
+        </a>
+        <a href="https://zalo.me/1427018841623558138" target="_blank" class="contact-btn contact-zalo">
+            <div class="contact-ring"></div>
+            <div class="contact-circle"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo"></div>
+            <span class="contact-tooltip">Chat Zalo</span>
+        </a>
+        <a href="tel:0905990679" class="contact-btn contact-phone">
+            <div class="contact-ring"></div>
+            <div class="contact-circle"><i class="fas fa-phone-alt"></i></div>
+            <span class="phone-bar">0905 990 679</span>
+        </a>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo-wrap">
+                <img src="./Picture/Logo Coffee.png" alt="Xơ Đăng Logo" class="logo-img">
+                <div>
+                    <div class="logo-text">Xơ Đăng</div>
+                    <div class="logo-sub">Farm Coffee</div>
+                </div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#about" data-i18n="nav_about">Câu Chuyện</a>
+                <a href="#farming" data-i18n="nav_farming">Canh Tác</a>
+                <a href="#products" data-i18n="nav_products">Sản Phẩm</a>
+                <a href="#pricing" data-i18n="nav_contact">Liên Hệ</a> 
+            </div>
+            
+            <div class="right-section">
+                <button class="nav-cart-btn" onclick="openCartModal()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="nav-cart-badge" id="cart-count">0</span>
+                </button>
+
+                <div class="lang-switcher">
+                    <button onclick="setLanguage('vi')"><img src="https://flagcdn.com/w40/vn.png" alt="Tiếng Việt"></button>
+                    <button onclick="setLanguage('en')"><img src="https://flagcdn.com/w40/gb.png" alt="English"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2074" alt="Rừng núi sương mù" class="hero-bg">
+        <div class="container">
+            <div class="hero-content reveal-left" style="padding-bottom: 50px;">
+                <span class="section-subtitle" style="color: var(--sunlight);" data-i18n="hero_sub">Cà Phê Mộc Nguyên Bản</span>
+                <h1 class="hero-title" data-i18n="hero_title">Hơi Thở<br>Đại Ngàn Tây Nguyên</h1>
+                
+                <p class="hero-desc" style="font-size: 1.35rem; font-style: italic; color: var(--sunlight); font-weight: 600; margin-bottom: 5px;" data-i18n="hero_slogan">
+                    "Hạt cà phê hôm nay, tương lai cho bản làng ngày mai"
+                </p>
+
+                <p class="hero-desc" style="font-size: 1.1rem; margin-bottom: 30px;" data-i18n="hero_desc">Đánh thức giác quan bằng những giọt cà phê chắt chiu từ sương sớm, nắng rát từ vùng đất đỏ bazan huyền thoại</p>
+                
+                <a href="#products" class="btn-jungle">
+                    <span data-i18n="btn_explore">KHÁM PHÁ HƯƠNG VỊ</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-hill-divider"></div>
+    </header>
+
+    <section class="stats-section" style="padding: 60px 0 100px; position: relative; z-index: 11; margin-top: -60px;">
+        <div class="container">
+            <div style="position: relative; width: 100%;">
+                
+                <svg style="position: absolute; top: 50%; left: 0; width: 100%; height: 100px; transform: translateY(-50%); z-index: 0; pointer-events: none;" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path d="M 0,50 Q 125,100 250,50 T 500,50 T 750,50 T 1000,50" fill="none" stroke="rgba(58, 107, 76, 0.3)" stroke-width="3" stroke-dasharray="8, 8" />
+                </svg>
+
+                <div class="organic-grid">
+                    <div class="leaf-card leaf-1 reveal">
+                        <div class="stat-num">100%</div>
+                        <div class="stat-label" data-i18n="stat_1">Hái Chín Cây</div>
+                    </div>
+                    <div class="leaf-card leaf-2 reveal" style="transition-delay: 0.1s;">
+                        <div class="stat-num">0%</div>
+                        <div class="stat-label" data-i18n="stat_2">Phụ Gia Tẩm Ướp</div>
+                    </div>
+                    <div class="leaf-card leaf-3 reveal" style="transition-delay: 0.2s;">
+                        <div class="stat-num">Farm</div>
+                        <div class="stat-label" data-i18n="stat_3">Quy trình khép kín</div>
+                    </div>
+                    <div class="leaf-card leaf-4 reveal" style="transition-delay: 0.3s;">
+                        <div class="stat-num">24h</div>
+                        <div class="stat-label" data-i18n="stat_4">Rang Mới Mỗi Ngày</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about" style="padding: 100px 0; background: #fff;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;">
+                
+                <div class="about-visuals reveal-left" style="position: relative; padding: 10px;">
+                    <div style="position: absolute; top: -10px; left: -10px; right: 30px; bottom: 30px; border: 2px dashed var(--earth-brown); border-radius: var(--leaf-shape); z-index: 1;"></div>
+                    <div style="border-radius: var(--leaf-shape); overflow: hidden; box-shadow: -15px 15px 0 var(--moss-green); position: relative; z-index: 2; border: 1px solid rgba(0,0,0,0.05);">
+                        <img src="./Picture/ảnh bìa.jpg" alt="Nông trại Xơ Đăng" style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;">
+                    </div>
+                </div>
+
+                <div class="about-content reveal-right" style="padding-left: 10px;">
+                    <span class="section-subtitle" data-i18n="about_sub">Câu Chuyện Nông Trại</span>
+                    <h2 class="section-title" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 25px;" data-i18n="about_title">Tinh Hoa Chắt Lọc Từ <span class="highlight">Đất Mẹ</span></h2>
+                    
+                    <p style="font-size: 1.05rem; color: #555; margin-bottom: 30px; text-align: justify;" data-i18n="about_desc">
+                        Chúng tôi không chỉ là thợ rang, chúng tôi là những người nông dân thấu hiểu từng nhịp thở của cây cà phê. Xơ Đăng Farm Coffee ra đời với sứ mệnh bảo vệ và lan tỏa hương vị cà phê <strong style="color: var(--forest-main);">mộc mạc, hoang dã nhưng tinh tế nhất</strong>.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 35px;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 40px; height: 40px; background: rgba(58, 107, 76, 0.08); color: var(--moss-green); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1rem;"><i class="fas fa-seedling"></i></div>
+                            <div style="font-weight: 700; font-size: 0.95rem; color: var(--forest-dark);" data-i18n="about_feature1">Thuận tự nhiên</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 40px; height: 40px; background: rgba(58, 107, 76, 0.08); color: var(--moss-green); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1rem;"><i class="fas fa-sun"></i></div>
+                            <div style="font-weight: 700; font-size: 0.95rem; color: var(--forest-dark);" data-i18n="about_feature2">Phơi nhà kính</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 40px; height: 40px; background: rgba(58, 107, 76, 0.08); color: var(--moss-green); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1rem;"><i class="fas fa-fire"></i></div>
+                            <div style="font-weight: 700; font-size: 0.95rem; color: var(--forest-dark);" data-i18n="about_feature3">Rang thấu hiểu</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 40px; height: 40px; background: rgba(58, 107, 76, 0.08); color: var(--moss-green); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1rem;"><i class="fas fa-hands-wash"></i></div>
+                            <div style="font-weight: 700; font-size: 0.95rem; color: var(--forest-dark);" data-i18n="about_feature4">Sơ chế chuẩn mực</div>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--fog-white); border-left: 4px solid var(--sunlight); padding: 20px 25px; border-radius: 0 15px 15px 0;">
+                        <p style="font-style: italic; font-weight: 600; color: var(--forest-main); font-size: 1.05rem; margin-bottom: 10px;" data-i18n="about_quote">
+                            "Sơ chế và rang cà phê không chỉ là kỹ thuật, mà là cách chúng tôi kể câu chuyện của đại ngàn."
+                        </p>
+                        <div style="font-weight: 800; font-size: 0.95rem; color: var(--forest-dark);" data-i18n="about_founder">
+                            Do Huu Nguyen <span style="font-weight: 500; color: #777;">/ Founder & Head Roaster</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="farming-process-section" id="farming" style="padding: 100px 0; background: var(--fog-white); position: relative;">
+        <div style="position: absolute; top: 10%; right: -5%; font-size: 30rem; color: rgba(58, 107, 76, 0.03); z-index: 0; pointer-events: none;"><i class="fas fa-leaf"></i></div>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="text-center reveal" style="margin-bottom: 80px;">
+                <span class="section-subtitle" data-i18n="farm_sub">Gắn Kết Cùng Bản Làng</span>
+                <h2 class="section-title" data-i18n="farm_title">Nghệ Thuật Canh Tác <span class="highlight">Bền Vững</span></h2>
+            </div>
+
+            <div class="farm-step reveal">
+                <div class="farm-img">
+                    <img src="./Picture/seek.jpg" alt="Trồng cà phê dưới tán rừng"  style="object-position: center bottom;">
+                </div>
+                <div class="farm-text">
+                    <div class="farm-title-group">
+                        <span class="step-num">01</span>
+                        <h3 data-i18n="farm_step1_title">Sinh Trưởng Dưới Tán Rừng Già</h3>
+                    </div>
+                    <p data-i18n="farm_step1_desc">Thay vì phát quang đồi trọc, cây cà phê Xơ Đăng được trồng xen canh dưới những tán cây cổ thụ cao lớn. Lối canh tác bảo tồn hệ sinh thái này tạo ra bóng mát lý tưởng, giúp quả cà phê chín chậm hơn, tích tụ lượng đường tự nhiên và hương vị phong phú nhất từ đất mẹ đại ngàn.</p>
+                </div>
+            </div>
+
+            <div class="farm-step reverse reveal">
+                <div class="farm-text">
+                    <div class="farm-title-group">
+                        <span class="step-num">02</span>
+                        <h3 data-i18n="farm_step2_title">Chăm Sóc Thuận Tự Nhiên</h3>
+                    </div>
+                    <p data-i18n="farm_step2_desc">Người nông dân hoàn toàn không sử dụng phân bón hóa học hay thuốc diệt cỏ độc hại. Cây cà phê được nuôi dưỡng bằng nguồn nước suối nguyên sơ và thảm mùn hữu cơ từ lá rừng rụng xuống. Đây là lời cam kết của chúng tôi về một môi trường xanh và sức khỏe của cộng đồng.</p>
+                </div>
+                <div class="farm-img">
+                    <img src="./Picture/cftree.jpg" alt="Chăm sóc thuận tự nhiên" style="object-position: top;">
+                </div>
+            </div>
+
+            <div class="farm-step reveal">
+                <div class="farm-img">
+                    <img src="./Picture/beansok.jpg" alt="Hái cà phê chín đỏ">
+                </div>
+                <div class="farm-text">
+                    <div class="farm-title-group">
+                        <span class="step-num">03</span>
+                        <h3 data-i18n="farm_step3_title">Thu Hoạch Trái Chín 100%</h3>
+                    </div>
+                    <p data-i18n="farm_step3_desc">Đến mùa thu hoạch, không có bất kỳ máy móc công nghiệp nào xen vào. Từng trái cà phê được đồng bào cẩn thận hái lượm bằng tay, chỉ chọn đúng những quả đã chín đỏ rực, căng mọng. Điều này đòi hỏi công sức gấp nhiều lần, nhưng là quy tắc bất di bất dịch để tạo ra mẻ rang hoàn hảo.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-subtitle" data-i18n="prod_sub">Bộ Sưu Tập Đầy Đủ</span>
+                <h2 class="section-title" data-i18n="prod_title">Hương Vị Từ <span class="highlight">Rừng Sâu</span></h2>
+            </div>
+            <div class="product-grid">
+                
+                <div class="product-card reveal">
+                    <div class="prod-badge" data-i18n="badge_1">Pha Phin</div>
+                    <div class="prod-img-wrap"><img src="./Picture/Classic.jpg" alt="Classic"></div>
+                    <div class="prod-info">
+                        <h3 class="prod-title" data-i18n="title_1">Xơ Đăng Classic</h3>
+                        <p class="prod-desc" data-i18n="desc_1">Sự mạnh mẽ, đầm chắc, hậu vị ngọt sâu lắng. Dành cho những tâm hồn thích sự cổ điển.</p>
+                        <div class="prod-price-box">
+                            <div class="price-display" id="price-1">65.000đ</div>
+                            <div class="weight-options">
+                                <button class="weight-btn active" onclick="changePrice('price-1', '65.000đ', this)">250g</button>
+                                <button class="weight-btn" onclick="changePrice('price-1', '125.000đ', this)">500g</button>
+                                <button class="weight-btn" onclick="changePrice('price-1', '240.000đ', this)">1000g</button>
+                            </div>
+                            <button class="btn-jungle" style="width: 100%; margin-top: 15px;" onclick="addToCart(this, 'Xơ Đăng Classic')">
+    <i class="fas fa-shopping-cart"></i> <span data-i18n="btn_add_cart">THÊM VÀO GIỎ</span>
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.1s;">
+                    <div class="prod-badge" data-i18n="badge_2">Đặc Biệt</div>
+                    <div class="prod-img-wrap"><img src="./Picture/RoHoney.jpg" alt="Honey"></div>
+                    <div class="prod-info">
+                        <h3 class="prod-title">Robusta Honey</h3>
+                        <p class="prod-desc" data-i18n="desc_2">Thơm mùi mật hoa rừng, thể chất dày mượt. Vị ngọt tự nhiên bùng nổ trong vòm họng.</p>
+                        <div class="prod-price-box">
+                            <div class="price-display" id="price-2">125.000đ</div>
+                            <div class="weight-options">
+                                <button class="weight-btn active" onclick="changePrice('price-2', '125.000đ', this)">500g</button>
+                                <button class="weight-btn" onclick="changePrice('price-2', '250.000đ', this)">1000g</button>
+                            </div>
+                            <button class="btn-jungle" style="width: 100%; margin-top: 15px;" onclick="addToCart(this, 'Robusta Honey')">
+    <i class="fas fa-shopping-cart"></i> <span data-i18n="btn_add_cart">THÊM VÀO GIỎ</span>
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.2s;">
+                    <div class="prod-badge" data-i18n="badge_3">Hoang Dã</div>
+                    <div class="prod-img-wrap"><img src="./Picture/RoNatural.jpg" alt="Natural"></div>
+                    <div class="prod-info">
+                        <h3 class="prod-title">Robusta Natural</h3>
+                        <p class="prod-desc" data-i18n="desc_3">Quả chín phơi nguyên vỏ dưới nắng, mang theo mùi trái cây lên men quyến rũ bí ẩn.</p>
+                        <div class="prod-price-box">
+                            <div class="price-display" id="price-3">135.000đ</div>
+                            <div class="weight-options">
+                                <button class="weight-btn" onclick="changePrice('price-3', '70.000đ', this)">250g</button>
+                                <button class="weight-btn active" onclick="changePrice('price-3', '135.000đ', this)">500g</button>
+                                <button class="weight-btn" onclick="changePrice('price-3', '260.000đ', this)">1000g</button>
+                            </div>
+                            <button class="btn-jungle" style="width: 100%; margin-top: 15px;" onclick="addToCart(this, 'Robusta Natural')">
+    <i class="fas fa-shopping-cart"></i> <span data-i18n="btn_add_cart">THÊM VÀO GIỎ</span>
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.3s;">
+                    <div class="prod-badge" data-i18n="badge_4">Mới Lạ</div>
+                    <div class="prod-img-wrap"><img src="./Picture/RoCBK.jpg" alt="RoCBK"></div>
+                    <div class="prod-info">
+                        <h3 class="prod-title">Robusta RoCBK</h3>
+                        <p class="prod-desc" data-i18n="desc_4">Hạt chế biến chuyên biệt, thích hợp làm các mẻ Cold Brew mát lạnh hoặc công thức phá cách.</p>
+                        <div class="prod-price-box">
+                            <div class="price-display" id="price-4">135.000đ</div>
+                            <div class="weight-options">
+                                <button class="weight-btn" onclick="changePrice('price-4', '70.000đ', this)">250g</button>
+                                <button class="weight-btn active" onclick="changePrice('price-4', '135.000đ', this)">500g</button>
+                                <button class="weight-btn" onclick="changePrice('price-4', '260.000đ', this)">1000g</button>
+                            </div>
+                            <button class="btn-jungle" style="width: 100%; margin-top: 15px;" onclick="addToCart(this, 'Robusta RoCBK')">
+    <i class="fas fa-shopping-cart"></i> <span data-i18n="btn_add_cart">THÊM VÀO GIỎ</span>
+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" style="transition-delay: 0.4s;">
+                    <div class="prod-badge" data-i18n="badge_5">Cao Cấp</div>
+                    <div class="prod-img-wrap"><img src="./Picture/Signature.jpg" alt="Signature"></div>
+                    <div class="prod-info">
+                        <h3 class="prod-title" data-i18n="title_5">Xơ Đăng Signature</h3>
+                        <p class="prod-desc" data-i18n="desc_5">Công thức phối trộn độc quyền, cân bằng hoàn hảo giữa chua thanh và đắng ngọt mượt mà.</p>
+                        <div class="prod-price-box">
+                            <div class="price-display" id="price-5">150.000đ</div>
+                            <div class="weight-options">
+                                <button class="weight-btn" onclick="changePrice('price-5', '80.000đ', this)">250g</button>
+                                <button class="weight-btn active" onclick="changePrice('price-5', '150.000đ', this)">500g</button>
+                                <button class="weight-btn" onclick="changePrice('price-5', '280.000đ', this)">1000g</button>
+                            </div>
+                            <button class="btn-jungle" style="width: 100%; margin-top: 15px;" onclick="addToCart(this, 'Xơ Đăng Signature')">
+    <i class="fas fa-shopping-cart"></i> <span data-i18n="btn_add_cart">THÊM VÀO GIỎ</span>
+</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="trail-section" id="trail">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-subtitle" style="color: var(--sunlight);" data-i18n="trail_sub">Quy Trình Chuẩn Mực</span>
+                <h2 class="section-title" data-i18n="trail_title">Hành Trình Tìm Hạt Vàng</h2>
+            </div>
+            <div class="trail-grid">
+                <div class="trail-step reveal">
+                    <div class="trail-icon"><i class="fas fa-tree"></i></div>
+                    <h3 class="trail-title" data-i18n="t_step1">1. Thu Hoạch</h3>
+                    <p class="trail-desc" data-i18n="t_desc1">Tuyển chọn thủ công những trái chín mọng đỏ rực.</p>
+                </div>
+                <div class="trail-step reveal" style="transition-delay: 0.1s;">
+                    <div class="trail-icon"><i class="fas fa-wind"></i></div>
+                    <h3 class="trail-title" data-i18n="t_step2">2. Sơ Chế Lên Men</h3>
+                    <p class="trail-desc" data-i18n="t_desc2">Rửa sạch và phơi trên giàn nắng tự nhiên của tự nhiên.</p>
+                </div>
+                <div class="trail-step reveal" style="transition-delay: 0.2s;">
+                    <div class="trail-icon"><i class="fas fa-fire-alt"></i></div>
+                    <h3 class="trail-title" data-i18n="t_step3">3. Rang Thấu Hiểu</h3>
+                    <p class="trail-desc" data-i18n="t_desc3">Canh lửa tỉ mỉ để đánh thức tiềm năng hương vị.</p>
+                </div>
+                <div class="trail-step reveal" style="transition-delay: 0.3s;">
+                    <div class="trail-icon"><i class="fas fa-mug-hot"></i></div>
+                    <h3 class="trail-title" data-i18n="t_step4">4. Đóng Gói Kín</h3>
+                    <p class="trail-desc" data-i18n="t_desc4">Túi zip valve 1 chiều giữ trọn hương rừng trao đến bạn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-subtitle" data-i18n="gal_sub">Góc Nhìn Chân Thực</span>
+                <h2 class="section-title" data-i18n="gal_title">Hình Ảnh Thực Tế</h2>
+            </div>
+            
+            <div class="gallery-grid reveal">
+                <div class="gallery-item"><img src="./Picture/ba.jpg" alt="Thực tế 1"></div>
+                <div class="gallery-item"><img src="./Picture/chim.jpg" alt="Thực tế 2"></div>
+                <div class="gallery-item"><img src="./Picture/chim2.jpg" alt="Thực tế 3"></div>
+                <div class="gallery-item"><img src="./Picture/cu.jpg" alt="Thực tế 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-map-section" id="pricing" style="padding: 100px 0;">
+        <div class="container">
+            <div class="map-inner reveal" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; background: #fff; border-radius: var(--leaf-shape); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(58, 107, 76, 0.2);">
+                
+                <div class="map-frame" style="position: relative; min-height: 420px; background: #e5e3df; width: 100%;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3851.0801131254775!2d107.74931397511699!3d15.153944385400624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDA5JzE0LjIiTiAxMDfCsDQ1JzA2LjgiRQ!5e0!3m2!1svi!2s!4v1781973701787!5m2!1svi!2s" 
+                        width="100%" height="100%" style="border:0; position: absolute; top: 0; left: 0;" 
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <div style="position: absolute; top: 20px; right: 20px; background: var(--forest-main); color: #fff; padding: 8px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 10; white-space: nowrap;" data-i18n="map_tag">
+                        <i class="fas fa-leaf"></i> Xơ Đăng Farm
+                    </div>
+                </div>
+
+                <div class="map-info" style="padding: 40px 50px 40px 30px; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 800; color: var(--forest-dark); margin-bottom: 25px;" data-i18n="map_title">Hệ Thống Xơ Đăng</h3>
+                    
+                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px dashed rgba(30, 63, 42, 0.2);">
+                        <h4 style="color: var(--moss-green); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase;" data-i18n="map_f_title"><i class="fas fa-mountain"></i> Nông Trại Sản Xuất</h4>
+                        <div style="display: flex; gap: 15px; margin-bottom: 12px; align-items: center;">
+                            <div class="map-contact-icon" style="width: 35px; height: 35px; background: var(--moss-green); color: var(--sunlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="mc-label" style="font-size: 0.85rem; color: #777; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;" data-i18n="map_f_lbl">Vị trí Farm</div>
+                                <div class="mc-value" style="font-size: 0.95rem; font-weight: 700; color: var(--forest-dark);" data-i18n="map_f_val">Đèo Lò Xo, Kon Tum</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div class="map-contact-icon" style="width: 35px; height: 35px; background: var(--moss-green); color: var(--sunlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div class="mc-label" style="font-size: 0.85rem; color: #777; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">Email</div>
+                                <div class="mc-value" style="font-size: 0.95rem; font-weight: 700; color: var(--forest-dark);">xodangfarmcoffee@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="color: var(--moss-green); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase;" data-i18n="map_o_title"><i class="fas fa-building"></i> Văn Phòng Phân Phối</h4>
+                        <div style="display: flex; gap: 15px; margin-bottom: 12px; align-items: center;">
+                            <div class="map-contact-icon" style="width: 35px; height: 35px; background: var(--moss-green); color: var(--sunlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;"><i class="fas fa-map-pin"></i></div>
+                            <div>
+                                <div class="mc-label" style="font-size: 0.85rem; color: #777; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;" data-i18n="map_o_lbl">Khu Vực Phân Phối</div>
+                                <div class="mc-value" style="font-size: 0.95rem; font-weight: 700; color: var(--forest-dark);" data-i18n="map_o_val">Đà Nẵng & Giao hàng toàn quốc</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 12px; align-items: center;">
+                            <div class="map-contact-icon" style="width: 35px; height: 35px; background: var(--moss-green); color: var(--sunlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <div class="mc-label" style="font-size: 0.85rem; color: #777; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;" data-i18n="map_call_lbl">Hotline Tư Vấn / Đặt Hàng</div>
+                                <div class="mc-value" style="color: var(--earth-brown); font-size: 1.05rem; font-weight: 700;">0905 990 679</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div class="map-contact-icon" style="width: 35px; height: 35px; background: var(--moss-green); color: var(--sunlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <div class="mc-label" style="font-size: 0.85rem; color: #777; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">Website</div>
+                                <div class="mc-value" style="font-size: 0.95rem; font-weight: 700; color: var(--forest-dark);">xodangfarmcf.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>XƠ ĐĂNG FARM COFFEE</h3>
+                <p style="margin-bottom: 15px; color: var(--sunlight); font-weight: 600; font-style: italic;" data-i18n="hero_slogan">"Hạt cà phê hôm nay, tương lai cho bản làng ngày mai"</p>
+                <p data-i18n="footer_desc">Mang hơi thở của đại ngàn Tây Nguyên vào từng tách cà phê mộc mạc của bạn. Đậm đà, nguyên bản và đầy tâm huyết.</p>
+                <div class="f-socials">
+                    <a href="https://www.facebook.com/xodangfarmcf.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://zalo.me/1427018841623558138"><i class="fas fa-comment-dots"></i></a>
+                    <a href="tel:0905990679"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 data-i18n="nav_contact">Liên Hệ</h3>
+                <div class="f-contact"><i class="fas fa-map-marker-alt"></i><p style="margin: 0;" data-i18n="footer_address">Đà Nẵng, Việt Nam</p></div>
+                <div class="f-contact"><i class="fas fa-phone-alt"></i><p style="margin: 0; color: var(--sunlight); font-weight: bold;">0905 990 679</p></div>
+                <div class="f-contact"><i class="fas fa-globe"></i><p style="margin: 0;">xodangfarmcf.com</p></div> <div class="f-contact"><i class="fas fa-envelope"></i><p style="margin: 0;">xodangfarmcoffee@gmail.com</p></div>
+            </div>
+            <div>
+                <h3 data-i18n="nav_products">Sản Phẩm</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><a href="#products"><i class="fas fa-angle-right" style="color: var(--moss-green); margin-right: 5px;"></i> <span data-i18n="footer_prod1">Cà Phê Pha Phin Classic</span></a></li>
+                    <li style="margin-bottom: 10px;"><a href="#products"><i class="fas fa-angle-right" style="color: var(--moss-green); margin-right: 5px;"></i> Robusta Honey / Natural</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#products"><i class="fas fa-angle-right" style="color: var(--moss-green); margin-right: 5px;"></i> Xo Dang Signature Blend</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Xơ Đăng Farm Coffee.</p>
+        </div>
+    </div>
+</footer>
+
+    <div id="toast" data-i18n="toast_added">Đã thêm vào giỏ hàng!</div>
+
+    <div id="cartModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:2000; justify-content:center; align-items:center; padding: 20px;">
+        <div style="background:#fff; padding:30px; border-radius:20px; width:100%; max-width:500px; max-height:90vh; overflow-y:auto; position:relative; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <span onclick="document.getElementById('cartModal').style.display='none'" style="position:absolute; top:10px; right:20px; cursor:pointer; font-size:28px;">×</span>
+            <h3 style="margin-bottom:20px; color:var(--forest-main); text-align:center;" data-i18n="modal_cart_title">GIỎ HÀNG CỦA BẠN</h3>
+            
+            <div id="cart-items" style="margin-bottom: 20px;"></div>
+            
+            <div style="text-align: right; font-weight: 800; font-size: 1.2rem; margin-bottom: 20px; color: var(--earth-brown);">
+                <span data-i18n="cart_total">Tổng cộng:</span> <span id="cart-total-price">0đ</span>
+            </div>
+
+            <form action="https://formspree.io/f/maqgwprr" method="POST">
+                <input type="hidden" name="Chi_Tiet_Don_Hang" id="order_details" value="">
+                
+                <input type="text" name="Tên_Khách_Hàng" placeholder="Tên của bạn" required style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px; font-family: 'Montserrat', sans-serif;">
+                <input type="tel" name="Số_Điện_Thoại" placeholder="Số điện thoại" required style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px; font-family: 'Montserrat', sans-serif;">
+                <input type="text" name="Địa_Chỉ_Giao_Hàng" placeholder="Địa chỉ giao hàng" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px; font-family: 'Montserrat', sans-serif;">
+                <button type="submit" class="btn-jungle" style="width:100%; justify-content:center;" data-i18n="modal_submit">CHỐT ĐƠN HÀNG</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mảng lưu trữ giỏ hàng
+        let cart = [];
+
+        // 1. Cập nhật giao diện Giá khi click chọn khối lượng
+        function changePrice(priceId, newPrice, clickedButton) {
+            document.getElementById(priceId).innerText = newPrice;
+            let siblings = clickedButton.parentElement.children;
+            for(let i = 0; i < siblings.length; i++){
+                siblings[i].classList.remove('active');
+            }
+            clickedButton.classList.add('active');
+        }
+
+        // 2. Thêm vào giỏ hàng
+        function addToCart(buttonElement) {
+    let card = buttonElement.closest('.prod-info');
+    
+    // Tìm và lấy thông tin Tên gốc và Khóa Dịch Thuật
+    let titleEl = card.querySelector('.prod-title');
+    let productName = titleEl.innerText;
+    let i18nKey = titleEl.getAttribute('data-i18n'); // <-- Lấy mã dịch thuật
+
+    let priceText = card.querySelector('.price-display').innerText;
+    let weightText = card.querySelector('.weight-btn.active').innerText;
+    let priceNum = parseInt(priceText.replace(/\D/g, ''));
+
+    let existingItem = cart.find(item => (item.name === productName || (i18nKey && item.i18nKey === i18nKey)) && item.weight === weightText);
+    
+    if (existingItem) {
+        existingItem.qty += 1;
+    } else {
+        cart.push({
+            name: productName,
+            i18nKey: i18nKey, // <-- Gắn mã dịch thuật đi theo sản phẩm vào giỏ
+            weight: weightText,
+            priceText: priceText,
+            priceNum: priceNum,
+            qty: 1
+        });
+    }
+    updateCartCount();
+    showToast();
+}
+
+        // 3. Đếm số lượng hiển thị lên icon
+        function updateCartCount() {
+            let total = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cart-count').innerText = total;
+        }
+
+        // 4. Mở popup Giỏ hàng HOẶC Cuộn xuống sản phẩm
+        function openCartModal() {
+            // Luôn trượt mượt mà xuống khu vực sản phẩm
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+            
+            // Nếu có món trong giỏ, đợi cuộn xong (600ms) rồi bật Form chốt đơn
+            if (cart.length > 0) {
+                renderCart();
+                setTimeout(() => {
+                    document.getElementById('cartModal').style.display = 'flex';
+                }, 600); 
+            }
+        }
+
+        // 5. Render html danh sách món
+        function renderCart() {
+    let container = document.getElementById('cart-items');
+    let hiddenInput = document.getElementById('order_details');
+    let totalPriceEl = document.getElementById('cart-total-price');
+
+    let html = "";
+    let total = 0;
+    let orderString = "CHI TIẾT ĐƠN HÀNG:\n\n";
+
+    cart.forEach((item, index) => {
+        let itemTotal = item.priceNum * item.qty;
+        total += itemTotal;
+        
+        // Trả thẻ dịch (i18n) vào đúng item trong giỏ để nó cũng đổi ngôn ngữ theo
+        let i18nAttr = item.i18nKey ? `data-i18n="${item.i18nKey}"` : '';
+
+        html += `
+        <div class="cart-item">
+            <div class="cart-item-info">
+                <div class="cart-item-title" ${i18nAttr}>${item.name}</div>
+                <div class="cart-item-meta">${item.weight} - ${item.priceText}</div>
+            </div>
+            <div class="cart-item-controls">
+                <button type="button" class="qty-btn" onclick="changeQty(${index}, -1)">-</button>
+                <span>${item.qty}</span>
+                <button type="button" class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+            </div>
+        </div>`;
+
+        orderString += `- ${item.qty}x ${item.name} (${item.weight}) : ${itemTotal.toLocaleString('vi-VN')}đ\n`;
+    });
+
+    orderString += `\nTổng cộng: ${total.toLocaleString('vi-VN')}đ`;
+    
+    container.innerHTML = html;
+    totalPriceEl.innerText = total.toLocaleString('vi-VN') + "đ";
+    hiddenInput.value = orderString;
+
+    // Ép hệ thống dịch lại một lần nữa các chữ vừa xuất hiện trong giỏ hàng
+    if (typeof setLanguage === "function") {
+        setLanguage(localStorage.getItem("lang") || "vi");
+    }
+}
+
+        // 6. Tăng giảm số lượng trong Giỏ
+        function changeQty(index, delta) {
+            cart[index].qty += delta;
+            if(cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartCount();
+            
+            if(cart.length === 0) {
+                document.getElementById('cartModal').style.display = "none";
+            } else {
+                renderCart();
+            }
+        }
+
+        // 7. Thông báo nhỏ "Đã thêm vào giỏ"
+        function showToast() {
+            let toast = document.getElementById("toast");
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
+        // Đóng form khi bấm ra viền đen
+        window.onclick = function(event) {
+            let modal = document.getElementById('cartModal');
+            if (event.target == modal) { modal.style.display = "none"; }
+        }
+
+        // HOẠT ẢNH TRƯỢT KHI SCROLL
+        function revealElements() {
+            var reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", revealElements);
+        revealElements();
+
+        // XỬ LÝ DỊCH CHỮ MỜ (PLACEHOLDER) TRONG FORM
+        function updatePlaceholders(lang) {
+            let nameInput = document.querySelector('input[name="Tên_Khách_Hàng"]');
+            let phoneInput = document.querySelector('input[name="Số_Điện_Thoại"]');
+            let addressInput = document.querySelector('input[name="Địa_Chỉ_Giao_Hàng"]');
+            
+            if(lang === 'en') {
+                if(nameInput) nameInput.placeholder = "Your Name";
+                if(phoneInput) phoneInput.placeholder = "Phone Number";
+                if(addressInput) addressInput.placeholder = "Delivery Address";
+            } else {
+                if(nameInput) nameInput.placeholder = "Tên của bạn";
+                if(phoneInput) phoneInput.placeholder = "Số điện thoại";
+                if(addressInput) addressInput.placeholder = "Địa chỉ giao hàng";
+            }
+        }
+
+        document.querySelectorAll('.lang-switcher button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                let selectedLang = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                updatePlaceholders(selectedLang);
+            });
+        });
+    </script>
+    
+    <script src="i18n.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLang = localStorage.getItem("lang") || "vi";
+            if (typeof setLanguage === "function") {
+                setLanguage(savedLang);
+            }
+            updatePlaceholders(savedLang);
+        });
+    </script>
+    <a href="https://shopee.vn/xodangcf" target="_blank" class="shopee-floating-btn" title="Mua trên Shopee">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Xơ Đăng Farm Coffee">
+</a>
+</body>
+</html>
