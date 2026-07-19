@@ -271,6 +271,19 @@
         .f-socials a:hover { background: var(--sunlight); color: var(--forest-dark); transform: translateY(-3px); }
         .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); }
 
+        /* ĐIỂM BÁN LẺ & ĐẠI LÝ */
+        .store-locator-section { padding: 80px 0 100px; background: var(--fog-white); position: relative; border-top: 1px dashed rgba(30, 63, 42, 0.2); }
+        .store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; }
+        .store-card { background: #fff; padding: 40px 30px; border-radius: var(--leaf-shape); box-shadow: 0 10px 30px rgba(30, 63, 42, 0.05); border: 1px solid rgba(58, 107, 76, 0.1); transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .store-card:hover { transform: translateY(-10px); border-color: var(--moss-green); box-shadow: 0 20px 40px rgba(30, 63, 42, 0.15); }
+        .store-badge { position: absolute; top: 0; right: 0; background: var(--sunlight); color: var(--forest-dark); font-weight: 800; font-size: 0.75rem; padding: 6px 18px; border-radius: 0 0 0 20px; text-transform: uppercase; letter-spacing: 1px;}
+        .store-title { font-size: 1.4rem; color: var(--forest-main); margin-bottom: 20px; font-weight: 800; padding-right: 30px; line-height: 1.3;}
+        .store-info-wrap { flex-grow: 1; display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
+        .store-info { display: flex; align-items: flex-start; gap: 15px; font-size: 0.95rem; color: #555; line-height: 1.5;}
+        .store-info i { color: var(--moss-green); margin-top: 4px; font-size: 1.1rem; width: 16px; text-align: center;}
+        .btn-map { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: auto; padding: 12px 25px; border: 2px solid var(--moss-green); color: var(--moss-green); border-radius: 30px; font-weight: 700; font-size: 0.9rem; transition: 0.3s; width: 100%; text-transform: uppercase; letter-spacing: 1px; background: transparent;}
+        .btn-map:hover { background: var(--moss-green); color: #fff; }
+
         /* HIỆU ỨNG ANIMATION CUỘN CHUỘT */
         .reveal { opacity: 0; transform: translateY(50px); transition: 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -315,6 +328,8 @@
             .leaf-card { width: 100%; border-radius: 50px 0 50px 0 !important; }
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
 
@@ -351,6 +366,7 @@
                 <a href="#farming" data-i18n="nav_farming">Canh Tác</a>
                 <a href="#products" data-i18n="nav_products">Sản Phẩm</a>
                 <a href="#pricing" data-i18n="nav_contact">Liên Hệ</a> 
+                <a href="#stores" data-i18n="nav_stores">Điểm Bán</a>
             </div>
             
             <div class="right-section">
@@ -678,6 +694,76 @@
         </div>
     </section>
 
+    <!-- BẮT ĐẦU: SECTION ĐIỂM BÁN LẺ & CÂU CHUYỆN -->
+    <section class="store-locator-section" id="stores">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-subtitle">Hệ Thống Phân Phối</span>
+                <h2 class="section-title">Các Điểm Bán Lẻ Của <span class="highlight">Hệ Thống Xơ Đăng</span></h2>
+            </div>
+            
+            <div class="store-grid" style="margin-bottom: 50px;">
+                <!-- Thẻ: 212 Lê Trọng Tấn -->
+                <div class="store-card reveal">
+                    <div class="store-badge">Điểm Bán Lẻ Chính</div>
+                    <h3 class="store-title">Xơ Đăng Store & Coffee</h3>
+                    
+                    <div class="store-info-wrap">
+                        <div class="store-info">
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <span>212 Lê Trọng Tấn, Phường Hòa Phát, Quận Cẩm Lệ, TP. Đà Nẵng</span>
+                        </div>
+                        <div class="store-info">
+                            <i class="far fa-clock"></i> 
+                            <span>06:00 - 17:00 (Mỗi ngày)</span>
+                        </div>
+                        <div class="store-info">
+                            <i class="fas fa-box-open"></i> 
+                            <span>Mua sản phẩm đóng gói & Thưởng thức cà phê pha chế trực tiếp.</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://maps.google.com/?q=212+Lê+Trọng+Tấn,+Đà+Nẵng" target="_blank" class="btn-map">
+                        <i class="fas fa-location-arrow"></i> <span>Nhận Chỉ Đường</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CÂU CHUYỆN NGƯỜI XƠ ĐĂNG BÁN LẺ & 5 ẢNH -->
+            <div class="store-story-wrap reveal" style="background: #fff; border-radius: var(--leaf-shape); padding: 40px; box-shadow: 0 10px 30px rgba(30,63,42,0.05); border: 1px solid rgba(58,107,76,0.1);">
+                <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+                    
+                    <!-- Phần chữ (Câu chuyện) -->
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3 style="font-size: 1.8rem; color: var(--forest-main); margin-bottom: 20px; font-weight: 800;">
+                            Câu Chuyện Nơi Quầy Pha Chế
+                        </h3>
+                        <p style="text-align: justify; color: #555; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8;">
+                            Tại điểm bán lẻ <strong>212 Lê Trọng Tấn</strong>, những người con của bản làng Xơ Đăng không chỉ mang đến từng gói cà phê mộc mạc, mà còn trực tiếp đứng quầy để kể câu chuyện của đại ngàn.
+                        </p>
+                        <p style="text-align: justify; color: #555; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8;">
+                            Đôi bàn tay chai sần từng gieo mầm trên đất đỏ bazan, nay lại tỉ mỉ chắt chiu từng giọt cà phê phin đậm đà giữa lòng thành phố. Chúng tôi muốn mỗi nụ cười chân chất, mỗi ly cà phê trao tay đều là cầu nối chân thật nhất giữa người nông dân và những vị khách thành thị.
+                        </p>
+                        <p style="font-style: italic; font-weight: 600; color: var(--earth-brown);">
+                            "Từ nông trại đến tách cà phê trên tay bạn - Một hành trình của sự trân trọng."
+                        </p>
+                    </div>
+
+                    <!-- Phần khung chứa 5 ảnh (Grid ghép ảnh nghệ thuật) -->
+                   <div class="swiper mySwiper" style="flex: 1; min-width: 300px; height: 400px; border: 1px solid #E2D5C4;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./picture/banle.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                <div class="swiper-slide"><img src="./picture/banle2.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                <div class="swiper-slide"><img src="./picture/banle3.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+                <div class="swiper-slide"><img src="./picture/banle4.jpg" style="width:100%; height:100%; object-fit:cover;"></div>
+            </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- KẾT THÚC: SECTION ĐIỂM BÁN LẺ & CÂU CHUYỆN -->
+
     <section class="pricing-map-section" id="pricing" style="padding: 100px 0;">
         <div class="container">
             <div class="map-inner reveal" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; background: #fff; border-radius: var(--leaf-shape); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(58, 107, 76, 0.2);">
@@ -992,5 +1078,15 @@
     <a href="https://shopee.vn/xodangcf" target="_blank" class="shopee-floating-btn" title="Mua trên Shopee">
     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Xơ Đăng Farm Coffee">
 </a>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+            delay: 3000, // Ảnh tự chuyển sau 3 giây
+            disableOnInteraction: false,
+        },
+        loop: true, // Chạy vòng tròn mãi mãi
+        effect: "fade", // Hiệu ứng mờ dần (nếu bạn thích trượt thì xóa dòng này)
+    });
+</script>
 </body>
 </html>

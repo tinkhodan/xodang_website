@@ -259,3 +259,30 @@ ul { list-style: none; }
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.story-layout{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:35px;
+
+}
+
+.story-content{
+
+    width:600px;
+
+}
+
+.story-slider{
+
+    width:380px;
+
+    height:500px;
+
+    flex-shrink:0;
+
+}

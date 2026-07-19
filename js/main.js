@@ -86,4 +86,43 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    const slides = document.querySelectorAll(".story-slide");
+
+if(slides.length){
+
+    let current = 0;
+
+    function showSlide(index){
+
+        slides.forEach(slide=>{
+
+            slide.classList.remove("active","fade-anim");
+
+        });
+
+        slides[index].classList.add("active");
+
+        void slides[index].offsetWidth;
+
+        slides[index].classList.add("fade-anim");
+
+    }
+
+    showSlide(current);
+
+    setInterval(()=>{
+
+        current++;
+
+        if(current>=slides.length){
+
+            current=0;
+
+        }
+
+        showSlide(current);
+
+    },3500);
+
+}
 });
