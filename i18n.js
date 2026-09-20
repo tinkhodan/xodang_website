@@ -1,10 +1,11 @@
 // 1. TỪ ĐIỂN DỮ LIỆU DỊCH
 const translations = {
     vi: {
-        // Navbar & Hero & Stats & About & Farming
+        // --- Navbar & Hero & Stats & About & Farming ---
         nav_about: "Câu Chuyện",
         nav_farming: "Canh Tác",
         nav_products: "Sản Phẩm",
+        nav_stores: "Điểm Bán",
         nav_contact: "Liên Hệ",
         btn_buy: "Mua Ngay",
         hero_sub: "Cà Phê Mộc Nguyên Bản",
@@ -64,6 +65,19 @@ const translations = {
         t_desc3: "Canh lửa tỉ mỉ để đánh thức tiềm năng hương vị.",
         t_step4: "4. Đóng Gói Kín",
         t_desc4: "Túi zip valve 1 chiều giữ trọn hương rừng trao đến bạn.",
+        
+        // --- PHẦN ĐIỂM BÁN LẺ & CÂU CHUYỆN (MỚI THÊM) ---
+        stores_sub: "Hệ Thống Phân Phối",
+        stores_title: 'Các Điểm Bán Lẻ Của <span class="highlight">Hệ Thống Xơ Đăng</span>',
+        stores_badge: "Điểm Bán Lẻ Chính",
+        stores_addr: "212 Lê Trọng Tấn, Phường Hòa Phát, Quận Cẩm Lệ, TP. Đà Nẵng",
+        stores_time: "06:00 - 17:00 (Mỗi ngày)",
+        stores_desc: "Mua sản phẩm đóng gói & Thưởng thức cà phê pha chế trực tiếp.",
+        stores_btn: "Nhận Chỉ Đường",
+        story_title: "Câu Chuyện Nơi Quầy Pha Chế",
+        story_p1: "Tại điểm bán lẻ <strong>212 Lê Trọng Tấn</strong>, những người con của bản làng Xơ Đăng không chỉ mang đến từng gói cà phê mộc mạc, mà còn trực tiếp đứng quầy để kể câu chuyện của đại ngàn.",
+        story_p2: "Đôi bàn tay chai sần từng gieo mầm trên đất đỏ bazan, nay lại tỉ mỉ chắt chiu từng giọt cà phê phin đậm đà giữa lòng thành phố. Chúng tôi muốn mỗi nụ cười chân chất, mỗi ly cà phê trao tay đều là cầu nối chân thật nhất giữa người nông dân và những vị khách thành thị.",
+        story_quote: '"Từ nông trại đến tách cà phê trên tay bạn - Một hành trình của sự trân trọng."',
 
         // --- PHẦN BẢN ĐỒ & LIÊN HỆ ---
         map_tag: "Xơ Đăng Farm",
@@ -97,10 +111,11 @@ const translations = {
         modal_submit: "CHỐT ĐƠN HÀNG"
     },
     en: {
-        // Navbar & Hero & Stats & About & Farming
+        // --- Navbar & Hero & Stats & About & Farming ---
         nav_about: "Our Story",
         nav_farming: "Farming",
         nav_products: "Products",
+        nav_stores: "Stores",
         nav_contact: "Contact",
         btn_buy: "Buy Now",
         hero_sub: "Original Specialty Coffee",
@@ -153,13 +168,26 @@ const translations = {
         trail_sub: "Standard Process",
         trail_title: "Journey to Find the Golden Bean",
         t_step1: "1. Harvesting",
-        t_desc1: "Hand-picking only the vibrant red, ripe victories.",
+        t_desc1: "Hand-picking only the vibrant red, ripe cherries.",
         t_step2: "2. Fermentation",
         t_desc2: "Washed and sun-dried on natural drying beds.",
         t_step3: "3. Mindful Roasting",
         t_desc3: "Meticulous heat control to awaken flavor potential.",
         t_step4: "4. Sealed Packaging",
         t_desc4: "One-way valve zip bags preserve the forest aroma delivered to you.",
+        
+        // --- PHẦN ĐIỂM BÁN LẺ & CÂU CHUYỆN (MỚI THÊM) ---
+        stores_sub: "Distribution System",
+        stores_title: 'Retail Stores of <span class="highlight">Xo Dang System</span>',
+        stores_badge: "Main Retail Store",
+        stores_addr: "212 Le Trong Tan, Hoa Phat Ward, Cam Le District, Da Nang City",
+        stores_time: "06:00 - 17:00 (Every day)",
+        stores_desc: "Buy packaged products & Enjoy freshly brewed coffee on-site.",
+        stores_btn: "Get Directions",
+        story_title: "The Story at the Brewing Counter",
+        story_p1: "At the <strong>212 Le Trong Tan</strong> retail store, the children of the Xo Dang village not only bring rustic coffee beans but also stand directly at the counter to tell the story of the deep forest.",
+        story_p2: "Calloused hands that once planted seeds in the red basalt soil now meticulously brew rich phin coffee in the heart of the city. We want every genuine smile and every cup of coffee handed over to be the truest bridge between the farmer and our urban guests.",
+        story_quote: '"From the farm to the cup in your hands - A journey of true appreciation."',
 
         // --- PHẦN BẢN ĐỒ & LIÊN HỆ ---
         map_tag: "Xo Dang Farm",
@@ -172,7 +200,7 @@ const translations = {
         map_o_val: "Da Nang & Nationwide Delivery",
         map_call_lbl: "Consultation / Order Hotline",
 
-        // --- PHẦN BÀN ĐỒ THỰC TẾ ---
+        // --- PHẦN HÌNH ẢNH THỰC TẾ ---
         gal_sub: "Authentic Perspectives",
         gal_title: "Real Moments",
 
@@ -194,12 +222,38 @@ const translations = {
     }
 };
 
+// 2. HÀM CẬP NHẬT PLACEHOLDER CHO FORM LIÊN HỆ
+function updatePlaceholders(lang) {
+    // Tìm các ô input dựa vào thuộc tính name bạn đã đặt trong HTML form
+    let nameInput = document.querySelector('input[name="Tên_Khách_Hàng"]');
+    let phoneInput = document.querySelector('input[name="Số_Điện_Thoại"]');
+    let addressInput = document.querySelector('input[name="Địa_Chỉ_Giao_Hàng"]');
+    
+    if (lang === 'en') {
+        if (nameInput) nameInput.placeholder = "Your Name";
+        if (phoneInput) phoneInput.placeholder = "Phone Number";
+        if (addressInput) addressInput.placeholder = "Delivery Address";
+    } else {
+        // Mặc định tiếng Việt
+        if (nameInput) nameInput.placeholder = "Tên của bạn";
+        if (phoneInput) phoneInput.placeholder = "Số điện thoại";
+        if (addressInput) addressInput.placeholder = "Địa chỉ giao hàng";
+    }
+}
+
+// 3. HÀM CHUYỂN ĐỔI NGÔN NGỮ CHÍNH
 function setLanguage(lang) {
+    // Lưu ngôn ngữ vào bộ nhớ trình duyệt để không bị mất khi F5
     localStorage.setItem("lang", lang);
+    
+    // Đổi ngôn ngữ cho các thẻ có thuộc tính data-i18n (Dùng innerHTML để giữ thẻ <span>, <strong>)
     document.querySelectorAll("[data-i18n]").forEach(element => {
         const key = element.getAttribute("data-i18n");
         if (translations[lang] && translations[lang][key]) {
             element.innerHTML = translations[lang][key]; 
         }
     });
+
+    // Gọi hàm dịch placeholder form
+    updatePlaceholders(lang);
 }
